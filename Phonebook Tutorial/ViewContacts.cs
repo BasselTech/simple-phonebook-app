@@ -38,7 +38,15 @@ namespace Phonebook_Tutorial
                 string lastname = reader.GetString(2);
                 string mobile = reader.GetString(3);
                 string notes = reader.GetString(4);
-                Image photo = Image.FromStream(new MemoryStream(reader.GetSqlBytes(5).Buffer));
+                Image photo = null;
+                try
+                {
+                    photo = Image.FromStream(new MemoryStream(reader.GetSqlBytes(5).Buffer));
+                }
+                catch(Exception ex)
+                {
+
+                }
                 Contacts.Add(new Contact(id, firstname, lastname, mobile, notes, photo));
                 listBox1.Items.Add(firstname + " " + lastname);
             }
