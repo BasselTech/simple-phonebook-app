@@ -15,5 +15,21 @@ namespace Phonebook_Tutorial
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ViewContacts view = new ViewContacts();
+            Hide();
+            view.ShowDialog();
+            Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddContact add = new AddContact();
+            Hide();
+            add.ShowDialog();
+            Show();
+        }
     }
 }
