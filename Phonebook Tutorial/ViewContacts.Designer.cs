@@ -62,6 +62,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(358, 22);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // listBox1
             // 
@@ -71,6 +72,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(418, 436);
             this.listBox1.TabIndex = 2;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -169,6 +171,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Edit Contact";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -199,6 +202,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ViewContacts";
             this.Text = "ViewContacts";
+            this.Load += new System.EventHandler(this.ViewContacts_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
